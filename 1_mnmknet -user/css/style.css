@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
 
 * {
     color: #000;
     box-sizing: border-box;
     outline: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box !important;
 
 
 }
+
 
 html {
     font-size: 13px;
@@ -43,6 +47,8 @@ ol {
 
 a {
     text-decoration: none;
+    background-color: transparent;
+    text-decoration: none;
 }
 
 img {
@@ -53,10 +59,13 @@ img {
 
 /* 공통 스타일 S */
 
-.montserrat{
+.montserrat, .montserrat * {
     font-family: "Montserrat", sans-serif; 
 }
-
+/*.IBM+Plex+Sans+KR {
+    font-family: "IBM Plex Sans KR", sans-serif;
+}
+*/
 h3 {
     font-size: 1.538rem;
     color: 212121;
@@ -107,176 +116,79 @@ header .site-top.right i {
     margin-right: 10px;
 }
 
-header nav {
-    display: flex;
-    height: 44px;
+header .page_location {
+    border-bottom: 1px solid #e7e7e7;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    line-height: 49px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
-header nav a {
-    flex-grow: 1;
-    width: 0;
-    text-align: center;
-    line-height: 44px;
-}
+
+
+
 
 /* 해더 영역 E */
 
 /* 메인 배너 영역 S */
-.main-banner img {
-    width: 100%;
 
+dl, dt, dd, ol, ul, li, span, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+.join_method {
+    padding: 10px 10px 10px 10px;
+}
+
+header .page_location .back {
+ 
+    height: 30px;
+    background-size: 13px;
+    left: 0;
+    top: 9px;
+    cursor: pointer;
+  
+}
+
+.join_method .sns_login li {
+    display: block;
+    margin: 7px 0 7px 0;
+}
+
+.join_method .sns_login li img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.join_method .sns_login li#btnJoin a {
+    color: #fff;
+}
+
+.join_method .sns_login li {
+    display: block;
+    margin: 7px 0 7px 0;
+}
+
+.join_method .sns_login li#btnJoin {
+    padding: 13px 0 13px 0;
+    font-size: 13px;
+    background: #3e3d3c;
+    border: 1px solid #3e3d3c;
+    text-align: center;
 }
 
 /* 메인 배너 영역 E */
 
-/* 서브 메뉴 영역 S */
-.sub-menus {
-    display: flex;
-    flex-wrap: wrap;
-    border: 10px solid #ededed;
-    border-left: 0;
-    border-right: 0;
-
-}
-
-.sub-menus a {
-    width: calc(100%/ 3);
-    text-align: center;
-    height: 50px;
-    line-height: 50px;
-    font-weight: 500;
-    font-size: 1.077rem;
-    border-top: 1px solid #ededed;
-    border-left: 1px solid #ededed;
 
 
-}
-
-.sub-menus a :nth-of-type(1) {
-    border-top: 0;
-}
-
-.sub-menus a :nth-of-type(2) {
-    border-top: 0;
-}
-
-.sub-menus a :nth-of-type(3) {
-    border-top: 0;
-}
-
-.sub-menus a :nth-of-type(3n+1) {
-    border-left: 0;
-}
 
 
-/*  서브 메뉴 영역 E */
-
-/* 서브 배너 영역 S */
-.sub-banner {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.sub-banner a:nth-of-type(1) {
-    width: 100%;
-}
-
-.sub-banner a:nth-of-type(2) {
-    width: 50%;
-}
-
-.sub-banner a:nth-of-type(3) {
-    width: 50%;
-}
-
-.sub-banner img {
-    width: 100%;
-    display: block;
-    display: flex;
-}
 
 
-/*  서브 배너 영역 E */
-
-
-/*  상품 목록 영역 S */
-
-.products ul {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 15px;
-}
-
-.products li {
-    width: calc(100% / 2 - 8px);
-    margin-bottom: 30px;
-}
-
-.products li:nth-of-type(2n) {
-    margin-left: 16px;
-}
-
-.products .product-image img {
-    width: 100%;
-    display: block;
-    border-radius: 10px;
-
-}
-
-.products .product-image {
-    margin-bottom: 10px;
-    display: block;
-    margin: 6px;
-}
-
-.products .product-price {
-    font-size: 1.154rem;
-}
-
-.products .product-price .price {
-    font-weight: 800;
-    font-size: 1.2rem;
-    letter-spacing: -1px;
-}
-
-.products .product-name {
-    padding: 0;
-    word-break: break-all;
-    color: #3e3d3c;
-    font-size: 15px;
-
-}
-
-.products .stars img {
-    height: 11px;
-}
-
-.products .no-of-review {
-    color: #a7a7a7;
-    margin-left: 6px;
-    font-size: 0.924rem;
-}
-
-.products .product-review-rates {
-    margin: 10px 0 2px;
-}
-
-.products .more-button {
-    display: block;
-    width: 100%;
-    padding: 8px 0 8px 0;
-    text-align: center;
-    background: #ffffff;
-    font-size: 15px;
-    border: 1px solid #b1b1b1;
-    color: #666666;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-
-/*  상품 목록 영역 E */
 
 /*  하단 배너 영역 S */
 
